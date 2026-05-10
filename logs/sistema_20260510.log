@@ -288,3 +288,24 @@
     ✘ Rechazadas        : 2
   Ingresos generados    : $16,712.70
 ════════════════════════════════════════════════════════════
+2026-05-10 15:50:37 | INFO     | ======================================================================
+2026-05-10 15:50:37 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:50:37 | INFO     | ======================================================================
+2026-05-10 15:50:37 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:50:37 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:50:37 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:50:37 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoria Cyber' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:50:37 | INFO     | Cliente registrado exitosamente: Cliente [CLI-001] | Ana Garcia | ana@empresa.com | Tel: +52 55 1234 5678 | Tipo: PREMIUM | Reservas: 0
+2026-05-10 15:50:37 | INFO     | Iniciando creación de reserva RSV-0001 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=3.0
+2026-05-10 15:50:37 | INFO     | Reserva creada: Reserva [RSV-0001] | Cliente: Ana Garcia | Servicio: Sala Ejecutiva A | Duración: 3.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:50:37 | INFO     | Reserva RSV-0001 CONFIRMADA | Costo total: $548.10 | Cliente: Ana Garcia
+2026-05-10 15:50:43 | INFO     | ======================================================================
+2026-05-10 15:50:43 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:50:43 | INFO     | ======================================================================
+2026-05-10 15:50:43 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:50:43 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
