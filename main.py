@@ -14,7 +14,7 @@ while True:
     opcion = input("Seleccione una opción: ")
 
     try:
-
+        
         opcion = int(opcion)
 
         if opcion == 1:

@@ -1,0 +1,290 @@
+2026-05-10 15:04:33 | INFO     | ======================================================================
+2026-05-10 15:04:33 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:04:33 | INFO     | ======================================================================
+2026-05-10 15:07:51 | INFO     | ======================================================================
+2026-05-10 15:07:51 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:07:51 | INFO     | ======================================================================
+2026-05-10 15:07:51 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:07:51 | INFO     | Cliente registrado exitosamente: Cliente [CLI-001] | Ana Garcia Lopez | ana.garcia@empresa.com | Tel: +52 55 1234 5678 | Tipo: PREMIUM | Reservas: 0
+2026-05-10 15:07:51 | DEBUG    | Intento de registro de cliente 'CLI-001' procesado.
+2026-05-10 15:07:51 | INFO     | Cliente registrado exitosamente: Cliente [CLI-002] | Carlos Mendoza | cmendoza@corp.mx | Tel: 555-9876-5432 | Tipo: CORPORATIVO | Reservas: 0
+2026-05-10 15:07:51 | DEBUG    | Intento de registro de cliente 'CLI-002' procesado.
+2026-05-10 15:07:51 | INFO     | Cliente registrado exitosamente: Cliente [CLI-003] | Lucia Ramirez | lucia.ramirez@gmail.com | Tel: 5591234567 | Tipo: REGULAR | Reservas: 0
+2026-05-10 15:07:51 | DEBUG    | Intento de registro de cliente 'CLI-003' procesado.
+2026-05-10 15:07:51 | ERROR    | Validacion fallida de cliente -- nombre muy corto | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'nombre': El nombre 'Jo' es demasiado corto (mínimo 3 caracteres).
+2026-05-10 15:07:51 | ERROR    | Validacion fallida de cliente -- email invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'email': El email 'correo-sin-arroba' no tiene un formato válido.
+2026-05-10 15:07:51 | ERROR    | Validacion fallida de cliente -- telefono invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'telefono': El teléfono 'AB' no tiene un formato válido.
+2026-05-10 15:07:51 | ERROR    | Validacion fallida de cliente -- tipo de cliente invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'tipo': El tipo 'vip' no es válido. Opciones: ('regular', 'premium', 'corporativo').
+2026-05-10 15:07:51 | WARNING  | Intento de registrar cliente duplicado: ID='CLI-001'
+2026-05-10 15:07:51 | WARNING  | Cliente duplicado detectado: [SFJ-102] El cliente con ID 'CLI-001' ya se encuentra registrado.
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S02] 'Sala de Capacitacion' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoria en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:07:51 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A02] 'Asesoria Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-10 15:07:51 | ERROR    | Servicio invalido rechazado -- Precio base negativo | Excepción: ValueError: El precio base debe ser mayor a 0. Se recibió: -100.0
+2026-05-10 15:07:51 | ERROR    | Servicio invalido rechazado -- Capacidad cero en sala | Excepción: ValueError: La capacidad debe ser un entero positivo. Se recibió: 0
+2026-05-10 15:07:51 | ERROR    | Servicio invalido rechazado -- Tipo de equipo no valido | Excepción: ValueError: Tipo de equipo 'dron' no válido. Opciones: ('laptop', 'proyector', 'servidor', 'impresora', 'tablet', 'otro')
+2026-05-10 15:07:51 | ERROR    | Servicio invalido rechazado -- Nivel de asesor invalido | Excepción: ValueError: Nivel de experto 'dios' no válido. Opciones: ('junior', 'senior', 'experto')
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0001 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=3.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0001] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 3.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0001 CONFIRMADA | Costo total: $469.80 | Cliente: Ana Garcia Lopez
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0002 | Cliente='CLI-002' | Servicio='SRV-E01' | Duración=5.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0002] | Cliente: Carlos Mendoza | Servicio: Laptop Dell XPS 15 | Duración: 5.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0002 CONFIRMADA | Costo total: $371.20 | Cliente: Carlos Mendoza
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0003 | Cliente='CLI-003' | Servicio='SRV-A01' | Duración=8.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0003] | Cliente: Lucia Ramirez | Servicio: Asesoria en Ciberseguridad | Duración: 8.0u | Fecha: 2026-05-10 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0003 CONFIRMADA | Costo total: $5568.00 | Cliente: Lucia Ramirez
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0004 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=15.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0004] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 15.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | ERROR    | Error al confirmar reserva RSV-0004 | Excepción: CalculoCostoError: [SFJ-401] Error aplicando descuento al servicio 'Sala Ejecutiva A'
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0005 | Cliente='CLI-999' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:07:51 | ERROR    | Cliente no encontrado: ID='CLI-999'
+2026-05-10 15:07:51 | ERROR    | Error de dominio al crear reserva RSV-0005 | Excepción: ClienteNoEncontradoError: [SFJ-103] No se encontró ningún cliente con ID 'CLI-999'.
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0006 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0006] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 2.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0006 CONFIRMADA | Costo total: $313.20 | Cliente: Ana Garcia Lopez
+2026-05-10 15:07:51 | WARNING  | Reserva RSV-0002 CANCELADA | Motivo: El evento fue pospuesto
+2026-05-10 15:07:51 | WARNING  | Operación no permitida sobre reserva RSV-0002: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:07:51 | WARNING  | Intento de operar sobre reserva cancelada: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:07:51 | ERROR    | Error al cancelar reserva RSV-9999 | Excepción: ReservaNoEncontradaError: [SFJ-302] No se encontró ninguna reserva con ID 'RSV-9999'.
+2026-05-10 15:07:51 | ERROR    | Descuento fuera de rango detectado | Excepción: DescuentoInvalidoError: [SFJ-402] El descuento '1.5' es inválido. Debe estar entre 0.0 y 1.0 (0% y 100%).
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0007 | Cliente='CLI-002' | Servicio='SRV-E02' | Duración=3.0
+2026-05-10 15:07:51 | ERROR    | Error de dominio al crear reserva RSV-0007 | Excepción: ServicioNoDisponibleError: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:07:51 | WARNING  | Intento de reservar servicio inactivo: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0001 marcada como COMPLETADA.
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0003 marcada como COMPLETADA.
+2026-05-10 15:07:51 | ERROR    | Error al completar reserva RSV-0001 | Excepción: OperacionNoPermitidaError: [SFJ-303] La operación 'completar' no está permitida para una reserva en estado 'completada'.
+2026-05-10 15:07:51 | INFO     | Iniciando creación de reserva RSV-0008 | Cliente='CLI-002' | Servicio='SRV-A02' | Duración=20.0
+2026-05-10 15:07:51 | INFO     | Reserva creada: Reserva [RSV-0008] | Cliente: Carlos Mendoza | Servicio: Asesoria Legal Empresarial | Duración: 20.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:07:51 | INFO     | Reserva RSV-0008 CONFIRMADA | Costo total: $7656.00 | Cliente: Carlos Mendoza
+2026-05-10 15:07:51 | INFO     | 
+════════════════════════════════════════════════════════════
+  RESUMEN DEL SISTEMA - Software FJ
+════════════════════════════════════════════════════════════
+  Clientes registrados  : 3
+  Servicios en catálogo : 6
+  Total de reservas     : 6
+    ✓ Confirmadas       : 2
+    ✔ Completadas       : 2
+    ✗ Canceladas        : 1
+    ✘ Rechazadas        : 1
+  Ingresos generados    : $14,007.00
+════════════════════════════════════════════════════════════
+2026-05-10 15:11:21 | INFO     | ======================================================================
+2026-05-10 15:11:21 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:11:21 | INFO     | ======================================================================
+2026-05-10 15:11:21 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:11:21 | INFO     | Cliente registrado exitosamente: Cliente [CLI-001] | Ana Garcia Lopez | ana.garcia@empresa.com | Tel: +52 55 1234 5678 | Tipo: PREMIUM | Reservas: 0
+2026-05-10 15:11:21 | DEBUG    | Intento de registro de cliente 'CLI-001' procesado.
+2026-05-10 15:11:21 | INFO     | Cliente registrado exitosamente: Cliente [CLI-002] | Carlos Mendoza | cmendoza@corp.mx | Tel: 555-9876-5432 | Tipo: CORPORATIVO | Reservas: 0
+2026-05-10 15:11:21 | DEBUG    | Intento de registro de cliente 'CLI-002' procesado.
+2026-05-10 15:11:21 | INFO     | Cliente registrado exitosamente: Cliente [CLI-003] | Lucia Ramirez | lucia.ramirez@gmail.com | Tel: 5591234567 | Tipo: REGULAR | Reservas: 0
+2026-05-10 15:11:21 | DEBUG    | Intento de registro de cliente 'CLI-003' procesado.
+2026-05-10 15:11:21 | ERROR    | Validacion fallida de cliente -- nombre muy corto | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'nombre': El nombre 'Jo' es demasiado corto (mínimo 3 caracteres).
+2026-05-10 15:11:21 | ERROR    | Validacion fallida de cliente -- email invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'email': El email 'correo-sin-arroba' no tiene un formato válido.
+2026-05-10 15:11:21 | ERROR    | Validacion fallida de cliente -- telefono invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'telefono': El teléfono 'AB' no tiene un formato válido.
+2026-05-10 15:11:21 | ERROR    | Validacion fallida de cliente -- tipo de cliente invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'tipo': El tipo 'vip' no es válido. Opciones: ('regular', 'premium', 'corporativo').
+2026-05-10 15:11:21 | WARNING  | Intento de registrar cliente duplicado: ID='CLI-001'
+2026-05-10 15:11:21 | WARNING  | Cliente duplicado detectado: [SFJ-102] El cliente con ID 'CLI-001' ya se encuentra registrado.
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S02] 'Sala de Capacitacion' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoria en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:11:21 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A02] 'Asesoria Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-10 15:11:21 | ERROR    | Servicio invalido rechazado -- Precio base negativo | Excepción: ValueError: El precio base debe ser mayor a 0. Se recibió: -100.0
+2026-05-10 15:11:21 | ERROR    | Servicio invalido rechazado -- Capacidad cero en sala | Excepción: ValueError: La capacidad debe ser un entero positivo. Se recibió: 0
+2026-05-10 15:11:21 | ERROR    | Servicio invalido rechazado -- Tipo de equipo no valido | Excepción: ValueError: Tipo de equipo 'dron' no válido. Opciones: ('laptop', 'proyector', 'servidor', 'impresora', 'tablet', 'otro')
+2026-05-10 15:11:21 | ERROR    | Servicio invalido rechazado -- Nivel de asesor invalido | Excepción: ValueError: Nivel de experto 'dios' no válido. Opciones: ('junior', 'senior', 'experto')
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0001 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=3.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0001] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 3.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0001 CONFIRMADA | Costo total: $704.70 | Cliente: Ana Garcia Lopez
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0002 | Cliente='CLI-002' | Servicio='SRV-E01' | Duración=5.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0002] | Cliente: Carlos Mendoza | Servicio: Laptop Dell XPS 15 | Duración: 5.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0002 CONFIRMADA | Costo total: $1322.40 | Cliente: Carlos Mendoza
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0003 | Cliente='CLI-003' | Servicio='SRV-A01' | Duración=8.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0003] | Cliente: Lucia Ramirez | Servicio: Asesoria en Ciberseguridad | Duración: 8.0u | Fecha: 2026-05-10 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0003 CONFIRMADA | Costo total: $8352.00 | Cliente: Lucia Ramirez
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0004 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=15.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0004] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 15.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | ERROR    | Error al confirmar reserva RSV-0004 | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:11:21 | ERROR    | Reserva sala rechazada por duracion invalida | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0005 | Cliente='CLI-999' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:11:21 | ERROR    | Cliente no encontrado: ID='CLI-999'
+2026-05-10 15:11:21 | ERROR    | Error de dominio al crear reserva RSV-0005 | Excepción: ClienteNoEncontradoError: [SFJ-103] No se encontró ningún cliente con ID 'CLI-999'.
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0006 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0006] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 2.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | ERROR    | Error al confirmar reserva RSV-0006 | Excepción: ReservaInvalidaError: [SFJ-301] La sala 'Sala Ejecutiva A' tiene capacidad para 10 personas. Se solicitaron 50 personas.
+2026-05-10 15:11:21 | WARNING  | Reserva RSV-0002 CANCELADA | Motivo: El evento fue pospuesto
+2026-05-10 15:11:21 | WARNING  | Operación no permitida sobre reserva RSV-0002: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:11:21 | WARNING  | Intento de operar sobre reserva cancelada: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:11:21 | ERROR    | Error al cancelar reserva RSV-9999 | Excepción: ReservaNoEncontradaError: [SFJ-302] No se encontró ninguna reserva con ID 'RSV-9999'.
+2026-05-10 15:11:21 | ERROR    | Descuento fuera de rango detectado | Excepción: DescuentoInvalidoError: [SFJ-402] El descuento '1.5' es inválido. Debe estar entre 0.0 y 1.0 (0% y 100%).
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0007 | Cliente='CLI-002' | Servicio='SRV-E02' | Duración=3.0
+2026-05-10 15:11:21 | ERROR    | Error de dominio al crear reserva RSV-0007 | Excepción: ServicioNoDisponibleError: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:11:21 | WARNING  | Intento de reservar servicio inactivo: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0001 marcada como COMPLETADA.
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0003 marcada como COMPLETADA.
+2026-05-10 15:11:21 | ERROR    | Error al completar reserva RSV-0001 | Excepción: OperacionNoPermitidaError: [SFJ-303] La operación 'completar' no está permitida para una reserva en estado 'completada'.
+2026-05-10 15:11:21 | INFO     | Iniciando creación de reserva RSV-0008 | Cliente='CLI-002' | Servicio='SRV-A02' | Duración=20.0
+2026-05-10 15:11:21 | INFO     | Reserva creada: Reserva [RSV-0008] | Cliente: Carlos Mendoza | Servicio: Asesoria Legal Empresarial | Duración: 20.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:11:21 | INFO     | Reserva RSV-0008 CONFIRMADA | Costo total: $7656.00 | Cliente: Carlos Mendoza
+2026-05-10 15:11:21 | INFO     | 
+════════════════════════════════════════════════════════════
+  RESUMEN DEL SISTEMA - Software FJ
+════════════════════════════════════════════════════════════
+  Clientes registrados  : 3
+  Servicios en catálogo : 6
+  Total de reservas     : 6
+    ✓ Confirmadas       : 1
+    ✔ Completadas       : 2
+    ✗ Canceladas        : 1
+    ✘ Rechazadas        : 2
+  Ingresos generados    : $16,712.70
+════════════════════════════════════════════════════════════
+2026-05-10 15:12:45 | INFO     | ======================================================================
+2026-05-10 15:12:45 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:12:45 | INFO     | ======================================================================
+2026-05-10 15:12:45 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:12:45 | INFO     | Cliente registrado exitosamente: Cliente [CLI-001] | Ana Garcia Lopez | ana.garcia@empresa.com | Tel: +52 55 1234 5678 | Tipo: PREMIUM | Reservas: 0
+2026-05-10 15:12:45 | DEBUG    | Intento de registro de cliente 'CLI-001' procesado.
+2026-05-10 15:12:45 | INFO     | Cliente registrado exitosamente: Cliente [CLI-002] | Carlos Mendoza | cmendoza@corp.mx | Tel: 555-9876-5432 | Tipo: CORPORATIVO | Reservas: 0
+2026-05-10 15:12:45 | DEBUG    | Intento de registro de cliente 'CLI-002' procesado.
+2026-05-10 15:12:45 | INFO     | Cliente registrado exitosamente: Cliente [CLI-003] | Lucia Ramirez | lucia.ramirez@gmail.com | Tel: 5591234567 | Tipo: REGULAR | Reservas: 0
+2026-05-10 15:12:45 | DEBUG    | Intento de registro de cliente 'CLI-003' procesado.
+2026-05-10 15:12:45 | ERROR    | Validacion fallida de cliente -- nombre muy corto | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'nombre': El nombre 'Jo' es demasiado corto (mínimo 3 caracteres).
+2026-05-10 15:12:45 | ERROR    | Validacion fallida de cliente -- email invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'email': El email 'correo-sin-arroba' no tiene un formato válido.
+2026-05-10 15:12:45 | ERROR    | Validacion fallida de cliente -- telefono invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'telefono': El teléfono 'AB' no tiene un formato válido.
+2026-05-10 15:12:45 | ERROR    | Validacion fallida de cliente -- tipo de cliente invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'tipo': El tipo 'vip' no es válido. Opciones: ('regular', 'premium', 'corporativo').
+2026-05-10 15:12:45 | WARNING  | Intento de registrar cliente duplicado: ID='CLI-001'
+2026-05-10 15:12:45 | WARNING  | Cliente duplicado detectado: [SFJ-102] El cliente con ID 'CLI-001' ya se encuentra registrado.
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S02] 'Sala de Capacitacion' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoria en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:12:45 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A02] 'Asesoria Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-10 15:12:45 | ERROR    | Servicio invalido rechazado -- Precio base negativo | Excepción: ValueError: El precio base debe ser mayor a 0. Se recibió: -100.0
+2026-05-10 15:12:45 | ERROR    | Servicio invalido rechazado -- Capacidad cero en sala | Excepción: ValueError: La capacidad debe ser un entero positivo. Se recibió: 0
+2026-05-10 15:12:45 | ERROR    | Servicio invalido rechazado -- Tipo de equipo no valido | Excepción: ValueError: Tipo de equipo 'dron' no válido. Opciones: ('laptop', 'proyector', 'servidor', 'impresora', 'tablet', 'otro')
+2026-05-10 15:12:45 | ERROR    | Servicio invalido rechazado -- Nivel de asesor invalido | Excepción: ValueError: Nivel de experto 'dios' no válido. Opciones: ('junior', 'senior', 'experto')
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0001 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=3.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0001] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 3.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0001 CONFIRMADA | Costo total: $704.70 | Cliente: Ana Garcia Lopez
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0002 | Cliente='CLI-002' | Servicio='SRV-E01' | Duración=5.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0002] | Cliente: Carlos Mendoza | Servicio: Laptop Dell XPS 15 | Duración: 5.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0002 CONFIRMADA | Costo total: $1322.40 | Cliente: Carlos Mendoza
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0003 | Cliente='CLI-003' | Servicio='SRV-A01' | Duración=8.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0003] | Cliente: Lucia Ramirez | Servicio: Asesoria en Ciberseguridad | Duración: 8.0u | Fecha: 2026-05-10 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0003 CONFIRMADA | Costo total: $8352.00 | Cliente: Lucia Ramirez
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0004 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=15.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0004] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 15.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | ERROR    | Error al confirmar reserva RSV-0004 | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:12:45 | ERROR    | Reserva sala rechazada por duracion invalida | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0005 | Cliente='CLI-999' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:12:45 | ERROR    | Cliente no encontrado: ID='CLI-999'
+2026-05-10 15:12:45 | ERROR    | Error de dominio al crear reserva RSV-0005 | Excepción: ClienteNoEncontradoError: [SFJ-103] No se encontró ningún cliente con ID 'CLI-999'.
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0006 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0006] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 2.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | ERROR    | Error al confirmar reserva RSV-0006 | Excepción: ReservaInvalidaError: [SFJ-301] La sala 'Sala Ejecutiva A' tiene capacidad para 10 personas. Se solicitaron 50 personas.
+2026-05-10 15:12:45 | WARNING  | Reserva RSV-0002 CANCELADA | Motivo: El evento fue pospuesto
+2026-05-10 15:12:45 | WARNING  | Operación no permitida sobre reserva RSV-0002: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:12:45 | WARNING  | Intento de operar sobre reserva cancelada: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:12:45 | ERROR    | Error al cancelar reserva RSV-9999 | Excepción: ReservaNoEncontradaError: [SFJ-302] No se encontró ninguna reserva con ID 'RSV-9999'.
+2026-05-10 15:12:45 | ERROR    | Descuento fuera de rango detectado | Excepción: DescuentoInvalidoError: [SFJ-402] El descuento '1.5' es inválido. Debe estar entre 0.0 y 1.0 (0% y 100%).
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0007 | Cliente='CLI-002' | Servicio='SRV-E02' | Duración=3.0
+2026-05-10 15:12:45 | ERROR    | Error de dominio al crear reserva RSV-0007 | Excepción: ServicioNoDisponibleError: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:12:45 | WARNING  | Intento de reservar servicio inactivo: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0001 marcada como COMPLETADA.
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0003 marcada como COMPLETADA.
+2026-05-10 15:12:45 | ERROR    | Error al completar reserva RSV-0001 | Excepción: OperacionNoPermitidaError: [SFJ-303] La operación 'completar' no está permitida para una reserva en estado 'completada'.
+2026-05-10 15:12:45 | INFO     | Iniciando creación de reserva RSV-0008 | Cliente='CLI-002' | Servicio='SRV-A02' | Duración=20.0
+2026-05-10 15:12:45 | INFO     | Reserva creada: Reserva [RSV-0008] | Cliente: Carlos Mendoza | Servicio: Asesoria Legal Empresarial | Duración: 20.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:12:45 | INFO     | Reserva RSV-0008 CONFIRMADA | Costo total: $7656.00 | Cliente: Carlos Mendoza
+2026-05-10 15:12:45 | INFO     | 
+════════════════════════════════════════════════════════════
+  RESUMEN DEL SISTEMA - Software FJ
+════════════════════════════════════════════════════════════
+  Clientes registrados  : 3
+  Servicios en catálogo : 6
+  Total de reservas     : 6
+    ✓ Confirmadas       : 1
+    ✔ Completadas       : 2
+    ✗ Canceladas        : 1
+    ✘ Rechazadas        : 2
+  Ingresos generados    : $16,712.70
+════════════════════════════════════════════════════════════
+2026-05-10 15:13:00 | INFO     | ======================================================================
+2026-05-10 15:13:00 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-10 15:13:00 | INFO     | ======================================================================
+2026-05-10 15:13:00 | INFO     | GestorSistema inicializado correctamente.
+2026-05-10 15:13:00 | INFO     | Cliente registrado exitosamente: Cliente [CLI-001] | Ana Garcia Lopez | ana.garcia@empresa.com | Tel: +52 55 1234 5678 | Tipo: PREMIUM | Reservas: 0
+2026-05-10 15:13:00 | DEBUG    | Intento de registro de cliente 'CLI-001' procesado.
+2026-05-10 15:13:00 | INFO     | Cliente registrado exitosamente: Cliente [CLI-002] | Carlos Mendoza | cmendoza@corp.mx | Tel: 555-9876-5432 | Tipo: CORPORATIVO | Reservas: 0
+2026-05-10 15:13:00 | DEBUG    | Intento de registro de cliente 'CLI-002' procesado.
+2026-05-10 15:13:00 | INFO     | Cliente registrado exitosamente: Cliente [CLI-003] | Lucia Ramirez | lucia.ramirez@gmail.com | Tel: 5591234567 | Tipo: REGULAR | Reservas: 0
+2026-05-10 15:13:00 | DEBUG    | Intento de registro de cliente 'CLI-003' procesado.
+2026-05-10 15:13:00 | ERROR    | Validacion fallida de cliente -- nombre muy corto | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'nombre': El nombre 'Jo' es demasiado corto (mínimo 3 caracteres).
+2026-05-10 15:13:00 | ERROR    | Validacion fallida de cliente -- email invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'email': El email 'correo-sin-arroba' no tiene un formato válido.
+2026-05-10 15:13:00 | ERROR    | Validacion fallida de cliente -- telefono invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'telefono': El teléfono 'AB' no tiene un formato válido.
+2026-05-10 15:13:00 | ERROR    | Validacion fallida de cliente -- tipo de cliente invalido | Excepción: ClienteInvalidoError: [SFJ-101] Campo 'tipo': El tipo 'vip' no es válido. Opciones: ('regular', 'premium', 'corporativo').
+2026-05-10 15:13:00 | WARNING  | Intento de registrar cliente duplicado: ID='CLI-001'
+2026-05-10 15:13:00 | WARNING  | Cliente duplicado detectado: [SFJ-102] El cliente con ID 'CLI-001' ya se encuentra registrado.
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [SALA] [SRV-S02] 'Sala de Capacitacion' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A01] 'Asesoria en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-10 15:13:00 | INFO     | Servicio agregado al catálogo: [ASESORÍA] [SRV-A02] 'Asesoria Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-10 15:13:00 | ERROR    | Servicio invalido rechazado -- Precio base negativo | Excepción: ValueError: El precio base debe ser mayor a 0. Se recibió: -100.0
+2026-05-10 15:13:00 | ERROR    | Servicio invalido rechazado -- Capacidad cero en sala | Excepción: ValueError: La capacidad debe ser un entero positivo. Se recibió: 0
+2026-05-10 15:13:00 | ERROR    | Servicio invalido rechazado -- Tipo de equipo no valido | Excepción: ValueError: Tipo de equipo 'dron' no válido. Opciones: ('laptop', 'proyector', 'servidor', 'impresora', 'tablet', 'otro')
+2026-05-10 15:13:00 | ERROR    | Servicio invalido rechazado -- Nivel de asesor invalido | Excepción: ValueError: Nivel de experto 'dios' no válido. Opciones: ('junior', 'senior', 'experto')
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0001 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=3.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0001] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 3.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0001 CONFIRMADA | Costo total: $704.70 | Cliente: Ana Garcia Lopez
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0002 | Cliente='CLI-002' | Servicio='SRV-E01' | Duración=5.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0002] | Cliente: Carlos Mendoza | Servicio: Laptop Dell XPS 15 | Duración: 5.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0002 CONFIRMADA | Costo total: $1322.40 | Cliente: Carlos Mendoza
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0003 | Cliente='CLI-003' | Servicio='SRV-A01' | Duración=8.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0003] | Cliente: Lucia Ramirez | Servicio: Asesoria en Ciberseguridad | Duración: 8.0u | Fecha: 2026-05-10 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0003 CONFIRMADA | Costo total: $8352.00 | Cliente: Lucia Ramirez
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0004 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=15.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0004] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 15.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | ERROR    | Error al confirmar reserva RSV-0004 | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:13:00 | ERROR    | Reserva sala rechazada por duracion invalida | Excepción: ReservaInvalidaError: [SFJ-301] La duración máxima para 'Sala Ejecutiva A' es 12.0 hora(s). Se solicitó 15.0h.
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0005 | Cliente='CLI-999' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:13:00 | ERROR    | Cliente no encontrado: ID='CLI-999'
+2026-05-10 15:13:00 | ERROR    | Error de dominio al crear reserva RSV-0005 | Excepción: ClienteNoEncontradoError: [SFJ-103] No se encontró ningún cliente con ID 'CLI-999'.
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0006 | Cliente='CLI-001' | Servicio='SRV-S01' | Duración=2.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0006] | Cliente: Ana Garcia Lopez | Servicio: Sala Ejecutiva A | Duración: 2.0u | Fecha: 2026-05-11 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | ERROR    | Error al confirmar reserva RSV-0006 | Excepción: ReservaInvalidaError: [SFJ-301] La sala 'Sala Ejecutiva A' tiene capacidad para 10 personas. Se solicitaron 50 personas.
+2026-05-10 15:13:00 | WARNING  | Reserva RSV-0002 CANCELADA | Motivo: El evento fue pospuesto
+2026-05-10 15:13:00 | WARNING  | Operación no permitida sobre reserva RSV-0002: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:13:00 | WARNING  | Intento de operar sobre reserva cancelada: [SFJ-303] La operación 'confirmar' no está permitida para una reserva en estado 'cancelada'.
+2026-05-10 15:13:00 | ERROR    | Error al cancelar reserva RSV-9999 | Excepción: ReservaNoEncontradaError: [SFJ-302] No se encontró ninguna reserva con ID 'RSV-9999'.
+2026-05-10 15:13:00 | ERROR    | Descuento fuera de rango detectado | Excepción: DescuentoInvalidoError: [SFJ-402] El descuento '1.5' es inválido. Debe estar entre 0.0 y 1.0 (0% y 100%).
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0007 | Cliente='CLI-002' | Servicio='SRV-E02' | Duración=3.0
+2026-05-10 15:13:00 | ERROR    | Error de dominio al crear reserva RSV-0007 | Excepción: ServicioNoDisponibleError: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:13:00 | WARNING  | Intento de reservar servicio inactivo: [SFJ-201] El servicio 'Servidor HP ProLiant' no está disponible: el servicio ha sido desactivado en el sistema
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0001 marcada como COMPLETADA.
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0003 marcada como COMPLETADA.
+2026-05-10 15:13:00 | ERROR    | Error al completar reserva RSV-0001 | Excepción: OperacionNoPermitidaError: [SFJ-303] La operación 'completar' no está permitida para una reserva en estado 'completada'.
+2026-05-10 15:13:00 | INFO     | Iniciando creación de reserva RSV-0008 | Cliente='CLI-002' | Servicio='SRV-A02' | Duración=20.0
+2026-05-10 15:13:00 | INFO     | Reserva creada: Reserva [RSV-0008] | Cliente: Carlos Mendoza | Servicio: Asesoria Legal Empresarial | Duración: 20.0u | Fecha: 2026-05-17 | Estado: PENDIENTE | Costo: $0.00
+2026-05-10 15:13:00 | INFO     | Reserva RSV-0008 CONFIRMADA | Costo total: $7656.00 | Cliente: Carlos Mendoza
+2026-05-10 15:13:00 | INFO     | 
+════════════════════════════════════════════════════════════
+  RESUMEN DEL SISTEMA - Software FJ
+════════════════════════════════════════════════════════════
+  Clientes registrados  : 3
+  Servicios en catálogo : 6
+  Total de reservas     : 6
+    ✓ Confirmadas       : 1
+    ✔ Completadas       : 2
+    ✗ Canceladas        : 1
+    ✘ Rechazadas        : 2
+  Ingresos generados    : $16,712.70
+════════════════════════════════════════════════════════════
