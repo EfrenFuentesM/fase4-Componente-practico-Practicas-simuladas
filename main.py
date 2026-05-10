@@ -8,7 +8,8 @@ while True:
     print("\n===== MENÚ =====")
     print("1. Agregar usuario")
     print("2. Mostrar usuarios")
-    print("3. Salir")
+    print("3. Eliminar usuario")
+    print("4. Salir")
 
     opcion = input("Seleccione una opción: ")
 
@@ -29,6 +30,12 @@ while True:
             sistema.mostrar_usuarios()
 
         elif opcion == 3:
+
+            nombre = input("Ingrese nombre del usuario a eliminar: ")
+
+            sistema.eliminar_usuario(nombre)
+
+        elif opcion == 4:
 
             print("Programa finalizado.")
             break

@@ -24,3 +24,13 @@ class Sistema:
 
             for usuario in self.usuarios:
                 print(usuario.mostrar_datos())
+
+    def eliminar_usuario(self, nombre):
+
+        for usuario in self.usuarios:
+            if usuario.nombre == nombre:
+                self.usuarios.remove(usuario)
+                print("Usuario eliminado correctamente.")
+                return
+
+        print("No se encontró un usuario con ese nombre.")
