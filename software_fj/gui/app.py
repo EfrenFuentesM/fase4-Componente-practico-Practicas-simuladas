@@ -103,13 +103,18 @@ class SoftwareFJApp(tk.Tk):
         sidebar.pack_propagate(False)
 
         # Logo
-        logo_frame = tk.Frame(sidebar, bg=C["sidebar"], height=72)
-        logo_frame.pack(fill="x")
+        logo_frame = tk.Frame(sidebar, bg=C["sidebar"], height=80) # Altura ajustada
+        logo_frame.pack(fill="x", padx=16)
         logo_frame.pack_propagate(False)
-        tk.Label(logo_frame, text="⚙", bg=C["sidebar"],
-                 fg=C["accent"], font=("Segoe UI", 22)).place(x=18, y=18)
-        tk.Label(logo_frame, text="Software FJ", bg=C["sidebar"],
-                 fg=C["text"], font=F["logo"]).place(x=52, y=22)
+        
+        # Ajuste: Contenedor para alinear icono y texto perfectamente
+        logo_container = tk.Frame(logo_frame, bg=C["sidebar"])
+        logo_container.place(relx=0, rely=0.5, anchor="w") # Centrado vertical relativo
+        
+        tk.Label(logo_container, text="⚙", bg=C["sidebar"],
+                 fg=C["accent"], font=("Segoe UI", 24)).pack(side="left") # Icono ligeramente más grande
+        tk.Label(logo_container, text="Software FJ", bg=C["sidebar"],
+                 fg=C["text"], font=F["logo"]).pack(side="left", padx=(10, 0), pady=(3, 0)) # Ajuste fino vertical del texto
         tk.Frame(sidebar, bg=C["border"], height=1).pack(fill="x")
 
         # Espaciado
