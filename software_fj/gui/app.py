@@ -1,4 +1,10 @@
-"""app.py - Ventana principal de la aplicación Software FJ"""
+"""
+app.py - Orquestador principal de la interfaz gráfica de Software FJ.
+
+Este archivo contiene la clase SoftwareFJApp, la cual gestiona la ventana principal,
+la navegación entre diferentes vistas (Dashboard, Clientes, etc.) y la integración
+con la lógica de negocio a través del objeto GestorSistema.
+"""
 import tkinter as tk
 from tkinter import messagebox
 from datetime import date
@@ -13,8 +19,12 @@ from software_fj.gui.vista_logs import VistaLogs
 
 
 class SoftwareFJApp(tk.Tk):
-    """Ventana principal del sistema Software FJ."""
+    """
+    Clase principal que hereda de tk.Tk para construir la ventana de la aplicación.
+    Implementa un sistema de navegación por pestañas personalizadas y manejo de estados.
+    """
 
+    # Configuración de los botones de la barra lateral (ID, Texto)
     _NAV = [
         ("dashboard", "🏠  Dashboard"),
         ("clientes",  "👥  Clientes"),
@@ -26,42 +36,46 @@ class SoftwareFJApp(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        # ── Configuración de ventana ─────────────────────────────────────────
+        # ── Configuración General de la Ventana ──────────────────────────────
         self.title("Software FJ — Sistema de Gestión Integral")
         self.geometry("1280x780")
         self.minsize(1024, 680)
         self.configure(bg=C["bg"])
         self.protocol("WM_DELETE_WINDOW", self._salir)
 
-        # Ícono (usa el ícono por defecto si no hay archivo)
+        # Intento de cargar el ícono de la aplicación
         try:
             self.iconbitmap(default="")
         except Exception:
             pass
 
-        # ── Backend ──────────────────────────────────────────────────────────
+        # ── Inicialización del Motor del Sistema (Backend) ───────────────────
+        # Se instancia el gestor que manejará la persistencia y lógica de datos.
         self.gestor = GestorSistema(directorio_logs="logs")
         self._cargar_datos_iniciales()
 
-        # ── Estilos ──────────────────────────────────────────────────────────
+        # ── Aplicación del Sistema de Estilos ────────────────────────────────
         aplicar_estilos(self)
 
-        # ── Construir UI ─────────────────────────────────────────────────────
-        self._nav_btns: dict[str, tk.Button] = {}
-        self._vistas:   dict[str, tk.Frame]  = {}
+        # ── Estructura de la Interfaz de Usuario ──────────────────────────────
+        self._nav_btns: dict[str, tk.Button] = {} # Registro de botones de navegación
+        self._vistas:   dict[str, tk.Frame]  = {} # Diccionario de marcos de vista
         self._vista_actual = ""
 
-        self._crear_sidebar()
-        self._crear_contenido()
-        self._crear_status_bar()
+        self._crear_sidebar()    # Panel lateral izquierdo
+        self._crear_contenido()  # Área central para las vistas
+        self._crear_status_bar() # Barra de estado inferior
 
-        # Arrancar en Dashboard
+        # Navegar automáticamente a la pantalla de inicio
         self._navegar("dashboard")
 
-    # ── Datos iniciales ───────────────────────────────────────────────────────
+    # ── Gestión de Datos ─────────────────────────────────────────────────────
 
     def _cargar_datos_iniciales(self):
-        """Pre-carga los 6 servicios de demostración."""
+        """
+        Carga una serie de servicios predefinidos para facilitar la demostración
+        y pruebas del sistema.
+        """
         from software_fj.servicios import (
             ReservaSala, AlquilerEquipo, AsesoriaEspecializada)
 
@@ -93,34 +107,35 @@ class SoftwareFJApp(tk.Tk):
             try:
                 self.gestor.agregar_servicio(srv)
             except Exception:
-                pass  # Ya existe (re-ejecución)
+                # Si el servicio ya existe en el gestor, se ignora el error
+                pass
 
-    # ── Sidebar ───────────────────────────────────────────────────────────────
+    # ── Construcción de la Barra Lateral (Sidebar) ───────────────────────────
 
     def _crear_sidebar(self):
+        """Construye el panel de navegación lateral."""
         sidebar = tk.Frame(self, bg=C["sidebar"], width=230)
         sidebar.pack(side="left", fill="y")
         sidebar.pack_propagate(False)
 
-        # Logo
-        logo_frame = tk.Frame(sidebar, bg=C["sidebar"], height=80) # Altura ajustada
+        # Sección del Logotipo
+        logo_frame = tk.Frame(sidebar, bg=C["sidebar"], height=80)
         logo_frame.pack(fill="x", padx=16)
         logo_frame.pack_propagate(False)
         
-        # Ajuste: Contenedor para alinear icono y texto perfectamente
         logo_container = tk.Frame(logo_frame, bg=C["sidebar"])
-        logo_container.place(relx=0, rely=0.5, anchor="w") # Centrado vertical relativo
+        logo_container.place(relx=0, rely=0.5, anchor="w")
         
         tk.Label(logo_container, text="⚙", bg=C["sidebar"],
-                 fg=C["accent"], font=("Segoe UI", 24)).pack(side="left") # Icono ligeramente más grande
+                 fg=C["accent"], font=("Segoe UI", 24)).pack(side="left")
         tk.Label(logo_container, text="Software FJ", bg=C["sidebar"],
-                 fg=C["text"], font=F["logo"]).pack(side="left", padx=(10, 0), pady=(3, 0)) # Ajuste fino vertical del texto
+                 fg=C["text"], font=F["logo"]).pack(side="left", padx=(10, 0), pady=(3, 0))
         tk.Frame(sidebar, bg=C["border"], height=1).pack(fill="x")
 
-        # Espaciado
+        # Espaciador
         tk.Frame(sidebar, bg=C["sidebar"], height=12).pack()
 
-        # Botones de navegación
+        # Generación dinámica de botones de menú
         for key, label in self._NAV:
             btn_frame = tk.Frame(sidebar, bg=C["sidebar"])
             btn_frame.pack(fill="x", padx=8, pady=2)
@@ -140,11 +155,12 @@ class SoftwareFJApp(tk.Tk):
                 cursor="hand2",
             )
             btn.pack(fill="x")
+            # Enlazar eventos de mouse para efectos visuales
             btn.bind("<Enter>", lambda e, b=btn, k=key: self._hover_on(b, k))
             btn.bind("<Leave>", lambda e, b=btn, k=key: self._hover_off(b, k))
             self._nav_btns[key] = btn
 
-        # Separador y versión en la parte inferior
+        # Espacio flexible y pie de la barra lateral
         tk.Frame(sidebar, bg=C["sidebar"]).pack(fill="both", expand=True)
         tk.Frame(sidebar, bg=C["border"], height=1).pack(fill="x")
         tk.Label(sidebar, text="v1.0 • Software FJ",
@@ -152,22 +168,27 @@ class SoftwareFJApp(tk.Tk):
                  font=F["small"]).pack(pady=10)
 
     def _hover_on(self, btn: tk.Button, key: str):
+        """Resalta el botón si no es el seleccionado actualmente."""
         if key != self._vista_actual:
             btn.config(bg=C["panel"], fg=C["text"])
 
     def _hover_off(self, btn: tk.Button, key: str):
+        """Restaura el estilo original del botón."""
         if key != self._vista_actual:
             btn.config(bg=C["sidebar"], fg=C["text2"])
 
-    # ── Área de contenido ─────────────────────────────────────────────────────
+    # ── Gestión de Contenido y Vistas ────────────────────────────────────────
 
     def _crear_contenido(self):
+        """Instancia y posiciona todas las vistas del sistema en el contenedor central."""
         contenedor = tk.Frame(self, bg=C["bg"])
         contenedor.pack(side="left", fill="both", expand=True)
 
+        # Argumentos comunes para todas las vistas
         kwargs = dict(gestor=self.gestor,
                       actualizar_status=self.actualizar_status)
 
+        # Mapeo de identificadores a clases de vista
         vistas_cls = {
             "dashboard": Dashboard,
             "clientes":  VistaClientes,
@@ -177,12 +198,14 @@ class SoftwareFJApp(tk.Tk):
         }
         for key, Cls in vistas_cls.items():
             vista = Cls(contenedor, **kwargs)
+            # Todas las vistas ocupan el mismo espacio (sistema de capas)
             vista.place(relx=0, rely=0, relwidth=1, relheight=1)
             self._vistas[key] = vista
 
-    # ── Barra de estado ───────────────────────────────────────────────────────
+    # ── Barra de Estado (Status Bar) ─────────────────────────────────────────
 
     def _crear_status_bar(self):
+        """Crea la barra inferior que muestra mensajes del sistema y la fecha."""
         bar = tk.Frame(self, bg=C["card"], height=28)
         bar.pack(side="bottom", fill="x")
         bar.pack_propagate(False)
@@ -200,6 +223,13 @@ class SoftwareFJApp(tk.Tk):
                  font=F["small"]).pack(side="right", padx=12)
 
     def actualizar_status(self, mensaje: str, tipo: str = "ok"):
+        """
+        Muestra un mensaje temporal en la barra de estado con un color indicativo.
+        
+        Args:
+            mensaje: El texto a mostrar.
+            tipo: 'ok', 'error', 'warn' o 'info'.
+        """
         colores = {
             "ok":    C["text2"],
             "error": C["error"],
@@ -208,25 +238,29 @@ class SoftwareFJApp(tk.Tk):
         }
         color = colores.get(tipo, C["text2"])
         self._status_lbl.config(text=f"  {mensaje}", fg=color)
-        # Resetea al color neutral después de 5 segundos
+        
+        # Restaurar mensaje neutral tras 5 segundos
         self.after(5000, lambda: self._status_lbl.config(
             text="  Sistema listo.", fg=C["text2"]))
 
-    # ── Navegación ────────────────────────────────────────────────────────────
+    # ── Lógica de Navegación ─────────────────────────────────────────────────
 
     def _navegar(self, vista: str):
-        # Actualizar botones del sidebar
+        """
+        Cambia la vista visible y actualiza el resaltado en el sidebar.
+        """
+        # Actualizar el aspecto de los botones de navegación
         for key, btn in self._nav_btns.items():
             if key == vista:
                 btn.config(bg=C["btn_primary"], fg=C["text"])
             else:
                 btn.config(bg=C["sidebar"], fg=C["text2"])
 
-        # Mostrar la vista seleccionada
+        # Traer la vista al frente (sistema de capas de Tkinter)
         self._vistas[vista].tkraise()
         self._vista_actual = vista
 
-        # Refrescar datos de la vista
+        # Ejecutar refresco de datos si la vista lo soporta
         v = self._vistas[vista]
         if hasattr(v, "refrescar"):
             try:
@@ -234,9 +268,10 @@ class SoftwareFJApp(tk.Tk):
             except Exception:
                 pass
 
-    # ── Cierre ────────────────────────────────────────────────────────────────
+    # ── Eventos de Salida ────────────────────────────────────────────────────
 
     def _salir(self):
+        """Muestra una confirmación antes de cerrar la aplicación."""
         if messagebox.askokcancel("Salir",
                                   "¿Deseas cerrar Software FJ?",
                                   parent=self):
