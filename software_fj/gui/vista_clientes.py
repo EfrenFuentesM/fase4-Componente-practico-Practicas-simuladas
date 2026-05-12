@@ -165,7 +165,8 @@ class VistaClientes(tk.Frame):
         win = tk.Toplevel(self)
         win.title(f"Detalle — {c.nombre}")
         win.configure(bg=C["card"])
-        win.geometry("420x300")
+        # Incrementado de 300 a 340 para asegurar visibilidad de campos
+        win.geometry("420x340")
         win.resizable(False, False)
         win.grab_set()
 
@@ -203,7 +204,8 @@ class _DialogCliente(tk.Toplevel):
         self.callback = callback
         self.title("Registrar Nuevo Cliente")
         self.configure(bg=C["card"])
-        self.geometry("440x420")
+        # Ajuste: Incrementado de 420 a 480 para evitar que los botones se corten en la parte inferior
+        self.geometry("440x480")
         self.resizable(False, False)
         self.grab_set()
         self._construir()

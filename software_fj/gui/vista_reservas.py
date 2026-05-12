@@ -275,7 +275,8 @@ class _DialogReserva(tk.Toplevel):
         self.callback  = callback
         self.title("Nueva Reserva")
         self.configure(bg=C["card"])
-        self.geometry("500x560")
+        # Ajuste: Incrementado de 560 a 620 para asegurar espacio para opciones dinámicas
+        self.geometry("500x620")
         self.resizable(False, False)
         self.grab_set()
         self._construir()
