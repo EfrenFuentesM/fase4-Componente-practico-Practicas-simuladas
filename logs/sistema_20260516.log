@@ -1,0 +1,60 @@
+2026-05-16 12:31:36 | INFO     | ======================================================================
+2026-05-16 12:31:36 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 12:31:36 | INFO     | ======================================================================
+2026-05-16 12:31:36 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 12:31:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | ======================================================================
+2026-05-16 12:50:27 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 12:50:27 | INFO     | ======================================================================
+2026-05-16 12:50:27 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 12:50:27 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | ======================================================================
+2026-05-16 12:54:17 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 12:54:17 | INFO     | ======================================================================
+2026-05-16 12:54:17 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 12:54:17 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | ======================================================================
+2026-05-16 12:58:04 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 12:58:04 | INFO     | ======================================================================
+2026-05-16 12:58:04 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 12:58:04 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | ======================================================================
+2026-05-16 13:09:36 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 13:09:36 | INFO     | ======================================================================
+2026-05-16 13:09:36 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 13:09:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | ======================================================================
+2026-05-16 13:12:36 | INFO     | Sistema Software FJ - Log de operaciones iniciado
+2026-05-16 13:12:36 | INFO     | ======================================================================
+2026-05-16 13:12:36 | INFO     | Motor GestorSistema iniciado con éxito.
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S01] 'Sala Ejecutiva A' | Capacidad: 10 personas | Equipamiento: Proyector, Videoconferencia | Precio: $150.00/h | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [SALA] [SRV-S02] 'Sala de Capacitación' | Capacidad: 30 personas | Equipamiento: Proyector | Precio: $200.00/h | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E01] 'Laptop Dell XPS 15' | Tipo: laptop | Stock: 5 unidades | Precio: $80.00/día | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [EQUIPO] [SRV-E02] 'Servidor HP ProLiant' | Tipo: servidor | Stock: 2 unidades | Precio: $250.00/día | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A01] 'Asesoría en Ciberseguridad' | Especialidad: Ciberseguridad | Nivel: Experto | Modalidad: Remota | Tarifa efectiva: $600.00/h | ✓ Disponible
+2026-05-16 13:12:36 | INFO     | Catálogo actualizado: [ASESORÍA] [SRV-A02] 'Asesoría Legal Empresarial' | Especialidad: Derecho Corporativo | Nivel: Senior | Modalidad: Presencial | Tarifa efectiva: $375.00/h | ✓ Disponible
